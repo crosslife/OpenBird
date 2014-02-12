@@ -25,7 +25,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
     // create the application instance
     AppDelegate app;
     EGLView eglView;
-    eglView.init("FlappyBird", 288, 512);
+    eglView.init("OpenBird - Ge Ziyang", 450, 800);
 
     int ret = Application::getInstance()->run();
 

@@ -128,7 +128,7 @@ local function showGameOverLayer()
 
         local function showScoreNumber()
             --CreateSpriteScore(nowScoreNode, totalScore, 2, 2)
-            CreateSpriteScore(bestScoreNode, 88, 2, 2)
+            CreateSpriteScore(bestScoreNode, 28, 2, 2)
 
             local tmpScore = 0
             local showSingleNumberFunc = 0
@@ -382,8 +382,9 @@ local function createLayerBg()
         	checkFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(checkHit, 0, false)
             birdRotateFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(rotateBird, 0, false)
         else
-            -- spriteBird:getPhysicsBody():setVelocity(cc.p(0, tapV))
-            spriteBird:getPhysicsBody():applyImpulse(cc.p(0, 20000))
+            -- spriteBird:setPosition(cc.p(birdX, spriteBird:getPositionY() + 10))
+            spriteBird:getPhysicsBody():setVelocity(cc.p(0, tapV))
+            -- spriteBird:getPhysicsBody():applyImpulse(cc.p(0, 20000))
             print(spriteBird:getPhysicsBody():getVelocity().y)
         end
 
