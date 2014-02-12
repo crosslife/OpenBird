@@ -2,3 +2,5 @@ proj.win32/Debug.win32/
 proj.win32/FlappyBird.opensdf
 proj.win32/FlappyBird.sdf
 cocos2d/
+proj.ios_mac/FlappyBird.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+proj.ios_mac/FlappyBird.xcodeproj/project.xcworkspace/xcuserdata/bran.xcuserdatad/UserInterfaceState.xcuserstate
