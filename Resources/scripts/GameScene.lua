@@ -269,7 +269,7 @@ local function createLayerBg()
     end  
 
     local function hideReady()
-
+        spriteBird:stopAllActions()
     	rTextSprite:runAction(cc.FadeOut:create(0.2))
     	rImage:runAction(cc.FadeOut:create(0.2))
 
