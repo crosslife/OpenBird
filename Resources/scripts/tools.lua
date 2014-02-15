@@ -8,6 +8,8 @@ local flySpeed  = 2.5
 local flyOffset = 5
 
 -- vars
+g_flyTag = 1000
+
 g_rateButton = nil
 g_playButton = nil
 g_rankButton = nil
@@ -121,7 +123,9 @@ function createFlyAction(position)
     local moveUp   = cc.MoveTo:create(1.0 / flySpeed, cc.p(position.x, position.y + flyOffset))
     local moveDown = cc.MoveTo:create(1.0 / flySpeed, cc.p(position.x, position.y - flyOffset))
 
-    return cc.RepeatForever:create(cc.Sequence:create(moveUp, moveDown))
+    local flyAction = cc.RepeatForever:create(cc.Sequence:create(moveUp, moveDown))
+    flyAction:setTag(g_flyTag)
+    return flyAction
 end
 
 local clickedButton = nil
