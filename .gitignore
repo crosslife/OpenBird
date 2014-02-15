@@ -1,3 +1,9 @@
 proj.win32/Debug.win32/
 proj.win32/FlappyBird.opensdf
 proj.win32/FlappyBird.sdf
+proj.android/assets/
+proj.android/bin/
+proj.android/obj/
+proj.android/gen/
+proj.android/libs/
+proj.android/.settings/
