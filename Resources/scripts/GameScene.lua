@@ -17,10 +17,6 @@ local landHeight = 112
 
 local tapV = 200
 local systemGravity = -700
-
-local wingPath = cc.FileUtils:getInstance():fullPathForFilename("sfx_wing.wav")
-local hitPath = cc.FileUtils:getInstance():fullPathForFilename("sfx_hit.wav")
-local scorePath = cc.FileUtils:getInstance():fullPathForFilename("sfx_point.wav")
 --config end
 
 -- vars
@@ -106,6 +102,7 @@ local function showGameOverLayer()
 
     local function showOverItems()
         local function showGameOverLogo()
+            cc.SimpleAudioEngine:getInstance():playEffect(uiPath)
             scoreNode:setVisible(false)
 
             gameOverLogo:setVisible(true)
@@ -118,6 +115,7 @@ local function showGameOverLayer()
         end
 
         local function showScorePanel()
+            cc.SimpleAudioEngine:getInstance():playEffect(uiPath)
             scorePanel:setVisible(true)
 
             local place = cc.Place:create(cc.p(midX, -100))
@@ -345,11 +343,15 @@ local function createLayerBg()
             if math.abs(pipes[i]:getPositionX() - birdX) < (birdSize + 26) then
                 -- check down
                 if spriteBird:getPositionY() < pipes[i]:getPositionY() + pipeHeight / 2 + birdSize then
+                    cc.SimpleAudioEngine:getInstance():playEffect(fallPath)
                     GameOver()
+                    return 
                 end
                 -- check up
                 if spriteBird:getPositionY() > pipes[i]:getPositionY() + pipeHeight / 2 + pipeDistance - birdSize then
+                    cc.SimpleAudioEngine:getInstance():playEffect(fallPath)
                     GameOver()
+                    return
                 end
             end
 
@@ -358,6 +360,7 @@ local function createLayerBg()
                 totalScore = totalScore + 1
                 cc.SimpleAudioEngine:getInstance():playEffect(scorePath)
                 refreshScore()
+                return
             end
         end
 	end
@@ -408,6 +411,7 @@ local function createLayerBg()
         spriteBird:getPhysicsBody():setEnable(false)
         spriteBird:stopAllActions()
         cc.Director:getInstance():getScheduler():unscheduleScriptEntry(birdRotateFunc)
+        birdRotateFunc = 0
     end
 
     local contactListener = cc.EventListenerPhysicsContactWithBodies:create(groudNode:getPhysicsBody(), spriteBird:getPhysicsBody())
@@ -417,16 +421,14 @@ local function createLayerBg()
     return layerBg
 end
 
-
-
-
-cc.SimpleAudioEngine:getInstance():preloadEffect(wingPath)
-cc.SimpleAudioEngine:getInstance():preloadEffect(hitPath)
-cc.SimpleAudioEngine:getInstance():preloadEffect(scorePath)
-
 local function resetGameSceneValue()
     totalScore = 0
     gameOver = false
+
+    if birdRotateFunc ~= 0 then
+        cc.Director:getInstance():getScheduler():unscheduleScriptEntry(birdRotateFunc)
+        birdRotateFunc = 0
+    end
 end
 -- run
 function createGameScene()

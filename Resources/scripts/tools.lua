@@ -17,6 +17,18 @@ g_rankButton = nil
 cc.FileUtils:getInstance():addSearchPath("res/")
 local textureAtlas = cc.Director:getInstance():getTextureCache():addImage("atlas.png")
 
+wingPath = cc.FileUtils:getInstance():fullPathForFilename("sfx_wing.wav")
+hitPath = cc.FileUtils:getInstance():fullPathForFilename("sfx_hit.wav")
+scorePath = cc.FileUtils:getInstance():fullPathForFilename("sfx_point.wav")
+fallPath = cc.FileUtils:getInstance():fullPathForFilename("sfx_die.wav")
+uiPath = cc.FileUtils:getInstance():fullPathForFilename("sfx_swooshing.wav")
+
+cc.SimpleAudioEngine:getInstance():preloadEffect(wingPath)
+cc.SimpleAudioEngine:getInstance():preloadEffect(hitPath)
+cc.SimpleAudioEngine:getInstance():preloadEffect(scorePath)
+cc.SimpleAudioEngine:getInstance():preloadEffect(fallPath)
+cc.SimpleAudioEngine:getInstance():preloadEffect(uiPath)
+
 visibleSize = cc.Director:getInstance():getVisibleSize()
 print("visibleSize :"..visibleSize.width.." "..visibleSize.height)
 
@@ -188,6 +200,7 @@ function onCommonMenuLayerTouchEnded(touch, event)
             end
             local trans = cc.TransitionFade:create(0.5, gameScene, cc.c3b(0,0,0))
             cc.Director:getInstance():replaceScene(trans)
+            cc.SimpleAudioEngine:getInstance():playEffect(uiPath)
         elseif clickedButton == g_rankButton then
 
         end
