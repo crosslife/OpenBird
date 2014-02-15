@@ -15,8 +15,8 @@ local pipeDistance = 100
 
 local landHeight = 112
 
-local tapV = 200
-local systemGravity = -700
+local tapV = 260
+local systemGravity = -900
 --config end
 
 -- vars
@@ -215,7 +215,7 @@ local function createPipes(layer)
 	end
 
 	initPipe()
-	createPipeFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(createPipe, 1.2, false)
+	createPipeFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(createPipe, 1.3, false)
 end
 
 
