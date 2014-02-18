@@ -324,7 +324,7 @@ local function createLayerBg()
 	-- check hit and calc score
     local function rotateBird()
         local v = spriteBird:getPhysicsBody():getVelocity()
-        spriteBird:setRotation(math.min(math.max(-90, v.y * 0.2), 30))
+        spriteBird:setRotation(math.min(math.max(-90, v.y * 0.2 + 60), 30))
     end
 
 	
@@ -410,6 +410,8 @@ local function createLayerBg()
         end
         spriteBird:getPhysicsBody():setEnable(false)
         spriteBird:stopAllActions()
+        spriteBird:setRotation(-90) 
+        
         cc.Director:getInstance():getScheduler():unscheduleScriptEntry(birdRotateFunc)
         birdRotateFunc = 0
     end
