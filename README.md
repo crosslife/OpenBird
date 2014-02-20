@@ -11,11 +11,14 @@ APK : <a href="http://url.cn/OXc9jo">Download</a>
 
 TODO:
 
-1. 双人同屏对战
-2. 多人wifi对战
+1. High score
+2. Game Center & Google Play
+3. pvp on single phone
+4. pvp on wifi
 
 Notice:
 
-1. 本项目图片资源取材自《Flappy Bird》，仅供游戏开发分享，严禁用于商业用途
-2. 有问题或建议请邮件 hustgeziyang#gmail.com
-3. 我的<a href="http://weibo.com/crosslife">新浪微博</a>
+1. Image Resources from 《Flappy Bird》
+2. E-mail:  hustgeziyang#gmail.com
+3. My <a href="https://twitter.com/hustcser">Twitter</a>
+4. 我的<a href="http://weibo.com/crosslife">新浪微博</a>
