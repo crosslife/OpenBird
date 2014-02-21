@@ -3,9 +3,9 @@ OpenBird
 
 Flappy Bird written in cocos2dx
 
-Latest gif
+Latest Gif
 
-<img src="https://f.cloud.github.com/assets/1802419/2179429/4628aa24-96b0-11e3-872e-2bfb88b369a0.gif">
+<img src="https://f.cloud.github.com/assets/1802419/2227290/dc423e48-9abc-11e3-9433-5ba2ab3e078c.gif">
 
 APK : <a href="http://url.cn/OXc9jo">Download</a>
 
