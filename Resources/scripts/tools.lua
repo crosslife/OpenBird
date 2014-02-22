@@ -59,12 +59,17 @@ end
 function createAtlasSprite(name)
     local tmpTable = a[name]
 
+    local rectX = tmpTable.x
+    local rectY = tmpTable.y
+    local rectWidth = tmpTable.width
+    local rectHeight = tmpTable.height
+
     -- fix 1px edge bug
     if name == "land" then
-        tmpTable.x = tmpTable.x + 1            
+        rectX = rectX + 1            
     end
 
-    local rect = cc.rect(tmpTable.x, tmpTable.y, tmpTable.width, tmpTable.height)
+    local rect = cc.rect(rectX, rectY, rectWidth, rectHeight)
     local frame = cc.SpriteFrame:createWithTexture(textureAtlas, rect)
     local atlasSprite = cc.Sprite:createWithSpriteFrame(frame)
 

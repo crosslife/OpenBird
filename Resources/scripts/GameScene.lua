@@ -160,6 +160,7 @@ local function showGameOverLayer()
             end
 
             CreateSpriteScore(bestScoreNode, savedBestScore, 2, 2)
+            CreateSpriteScore(nowScoreNode, 0, 2, 2)
 
             local tmpScore = 0
             local showSingleNumberFunc = 0
@@ -172,7 +173,7 @@ local function showGameOverLayer()
                 end
             end
 
-            showSingleNumberFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(showSingleNumber, 0.1, false)
+            showSingleNumberFunc = cc.Director:getInstance():getScheduler():scheduleScriptFunc(showSingleNumber, 0.5 / totalScore, false)
         end
 
         local function showBottomButton()
