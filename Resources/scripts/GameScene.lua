@@ -140,7 +140,7 @@ local function showGameOverLayer()
                 return
             end
 
-            local medalStr = "medals_"..(math.min(4 - math.floor(totalScore / 10), 3))
+            local medalStr = "medals_"..(math.max(4 - math.floor(totalScore / 10), 0))
             local medalSprite = createAtlasSprite(medalStr)
 
             medalSprite:setPosition(cc.p(55, 60))
