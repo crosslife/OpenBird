@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+		<declare-styleable name="com.admob.android.ads.AdView">  
+				<attr name="testing" format="boolean" />  
+				<attr name="backgroundColor" format="color" />  
+				<attr name="textColor" format="color" />  
+				<attr name="keywords" format="string" />  
+				<attr name="refreshInterval" format="integer" />  
+				<attr name="isGoneWithoutAd" format="boolean" />  
+		</declare-styleable>  
+</resources>  

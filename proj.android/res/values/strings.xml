@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FlappyBird</string>
+	<string name="ad_unit_id">a15289ac58b83d3</string>
 </resources>
