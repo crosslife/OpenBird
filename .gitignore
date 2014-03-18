@@ -7,3 +7,5 @@ proj.android/obj/
 proj.android/gen/
 proj.android/libs/
 proj.android/.settings/
+proj.android/google-play-services_lib/bin/
+proj.android/google-play-services_lib/gen/

@@ -2,6 +2,10 @@
 #include "CCLuaEngine.h"
 #include "SimpleAudioEngine.h"
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "AdmobHelper.h"
+#endif
+
 using namespace CocosDenshion;
 
 USING_NS_CC;
@@ -36,6 +40,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     //The call was commented because it will lead to ZeroBrane Studio can't find correct context when debugging
     //engine->executeScriptFile("hello.lua");
     engine->executeString("require 'main.lua'");
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+	AdmobHelper::showAds();
+#endif
     
     return true;
 }
