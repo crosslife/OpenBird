@@ -34,7 +34,7 @@ public class Cocos2dxActivity extends NativeActivity{
                 // you can get the ID from Admob
         adView.setAdUnitId("a15289ac58b83d3");
         adView.setAdSize(AdSize.BANNER);
-	
+        adView.setAdListener(new AdmobListener());	
 	}
 	
 	public static void showAdPopup(){
@@ -89,7 +89,7 @@ public class Cocos2dxActivity extends NativeActivity{
                     // risk to be banned!
                     _activity.adView.loadAd(adRequest);
                     // Show our popup window
-                    popUp.showAtLocation(mainLayout, Gravity.BOTTOM, 0, 0);
+                    
                     popUp.update();
 
                 }
@@ -116,7 +116,7 @@ public class Cocos2dxActivity extends NativeActivity{
         @Override
         public void onAdLoaded() {
             super.onAdLoaded();
-
+            popUp.showAtLocation(mainLayout, Gravity.BOTTOM, 0, 0);
         }
 
         @Override
