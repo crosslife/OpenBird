@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes;$(EngineRoot)cocos\audio\include;$(EngineRoot)cocos\scripting\auto-generated\lua-bindings;$(EngineRoot)cocos\scripting\lua\bindings;$(EngineRoot)external;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\lua\lua;$(EngineRoot)external\chipmunk\include\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes\LuaInterface;$(ProjectDir)..\Classes;$(EngineRoot)cocos\audio\include;$(EngineRoot)cocos\scripting\auto-generated\lua-bindings;$(EngineRoot)cocos\scripting\lua\bindings;$(EngineRoot)external;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\lua\lua;$(EngineRoot)external\chipmunk\include\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -166,11 +166,14 @@ xcopy /Y /Q "$(ProjectDir)..\cocos2d\external\websockets\prebuilt\win32\*.*" "$(
   <ItemGroup>
     <ClInclude Include="..\Classes\AdmobHelper.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\LuaInterface\luaconf.h" />
+    <ClInclude Include="..\Classes\LuaInterface\lua_tinker.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AdmobHelper.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\LuaInterface\lua_tinker.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

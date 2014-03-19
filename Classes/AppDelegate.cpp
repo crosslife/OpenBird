@@ -1,9 +1,15 @@
 #include "AppDelegate.h"
 #include "CCLuaEngine.h"
 #include "SimpleAudioEngine.h"
+#include "lua_tinker.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "AdmobHelper.h"
+
+void showAds()
+{
+	AdmobHelper::showAds();
+}
 #endif
 
 using namespace CocosDenshion;
@@ -42,7 +48,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     engine->executeString("require 'main.lua'");
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-	AdmobHelper::showAds();
+	//AdmobHelper::showAds();
+	//bind func to lua
+	lua_State * L = LuaEngine::getInstance()->getLuaStack()->getLuaState();
+	lua_tinker::def(L, "showAds", showAds);
 #endif
     
     return true;

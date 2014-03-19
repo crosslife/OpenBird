@@ -207,7 +207,7 @@ function onCommonMenuLayerTouchEnded(touch, event)
             cc.Director:getInstance():replaceScene(trans)
             cc.SimpleAudioEngine:getInstance():playEffect(uiPath)
         elseif clickedButton == g_rankButton then
-
+            showAds()
         end
 
         clickedButton = nil

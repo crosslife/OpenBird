@@ -8,10 +8,11 @@ LOCAL_MODULE_FILENAME := libcocos2dlua
 
 LOCAL_SRC_FILES := hellolua/main.cpp \
                    ../../Classes/AppDelegate.cpp \
-				   ../../Classes/AdmobHelper.cpp
-
+				   ../../Classes/AdmobHelper.cpp \
+				   ../../Classes/LuaInterface/lua_tinker.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes \
+					$(LOCAL_PATH)/../../Classes/LuaInterface \
                     $(LOCAL_PATH)/../../cocos2d/external/lua/tolua
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos_lua_static
