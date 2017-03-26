@@ -12,6 +12,7 @@ Update: 2017.3.26
 另外，对于想尝试游戏开发的同学来说，cocos已经不值得推荐，请改用Unity，计算机科班同学可尝试Unreal。这两个引擎是目前大家最常用的。
 
 最后送大家一句话：If you want to make something fun, have fun making it! 
+
 ——————————
 Latest Gif
 
