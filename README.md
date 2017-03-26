@@ -15,6 +15,8 @@ Update: 2017.3.26
 
 我也使用Unity实现了Flappy Bird，见<a href="https://github.com/crosslife/UnityBird">这里</a>，功能基本完善，后续我会完善这个项目，作为“麻雀虽小五脏俱全”的一个demo.
 
+关于游戏开发的问题也可以问我，见下面我的知乎。
+
 最后送大家一句话：If you want to make something fun, have fun making it! 
 
 ——————————
