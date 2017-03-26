@@ -5,7 +5,7 @@ Flappy Bird made with cocos2dx
 
 Update: 2017.3.26
 
-这个项目写于三年前，当时正值手游刚刚兴起的时候，引起了不少关注。
+这个项目写于三年前，目标是做出和原版完全一样的体验。当时正值手游刚刚兴起的时候，引起了不少关注。
 
 令我惊讶的是至今仍不断有人star这个项目。会对这个项目感兴趣的一定是萌新游戏开发者，因此我更新了这个项目的说明。
 
@@ -13,7 +13,7 @@ Update: 2017.3.26
 
 另外，对于想尝试游戏开发的同学来说，cocos已经不值得推荐，请改用Unity，计算机科班同学可尝试Unreal。这两个引擎是目前大家最常用的。
 
-我也使用Unity实现了Flappy Bird，见<a href="https://github.com/crosslife/UnityBird">这里</a>，功能基本完善。
+我也使用Unity实现了Flappy Bird，见<a href="https://github.com/crosslife/UnityBird">这里</a>，功能基本完善，后续我会完善这个项目，作为“麻雀虽小五脏俱全”的一个demo.
 
 最后送大家一句话：If you want to make something fun, have fun making it! 
 
@@ -22,15 +22,6 @@ Update: 2017.3.26
 Latest Gif
 
 <img src="https://f.cloud.github.com/assets/1802419/2227290/dc423e48-9abc-11e3-9433-5ba2ab3e078c.gif">
-
-APK : <a href="http://url.cn/OVz5pV">Download</a>
-
-TODO:
-
-1. High score
-2. Game Center & Google Play
-3. pvp on single phone
-4. pvp on wifi
 
 Notice:
 
