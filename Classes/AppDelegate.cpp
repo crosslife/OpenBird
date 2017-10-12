@@ -1,7 +1,7 @@
 #include "AppDelegate.h"
 #include "CCLuaEngine.h"
 #include "SimpleAudioEngine.h"
-#include "lua_tinker.h"
+#include "LuaInterface/lua_tinker.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "AdmobHelper.h"
